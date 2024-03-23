@@ -1,0 +1,61 @@
+<style>
+.viwer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* محاذاة العناصر في المنتصف */
+    gap: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 300px) {
+    .viwer {
+        flex-direction: column; /* ترتيب العناصر في عمود واحد للهواتف */
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .viwer {
+        flex-wrap: nowrap; /* لمنع العناصر من الانتقال إلى سطر جديد */
+    }
+
+    .viwer > div {
+        flex: 1 0 33.33%; /* توزيع العناصر بنسبة ثلاثة أعمدة عندما يتجاوز عرض الشاشة 600 بكسل */
+        max-width: 33.33%; /* تحديد عرض العناصر في حالة الشاشات الكبيرة */
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    overflow: hidden;
+    width: 100%; /* تأكيد عرض الفيديو */
+    max-width: 100%; /* منع تجاوز العرض في الشاشات الصغيرة */
+}
+
+</style>
+
+
+<div style="text-align: center;" data-sheetdb-url="https://sheetdb.io/api/v1/zqrv0iabz2lzv"
+    data-sheetdb-search="id=1">
+    <h2>{{title}}</h2>
+    <video width="320" height="240" controls>
+  <source src={{url}} type="video/mp4">
+</video>
+    
+</div>
+
+<div style="text-align: center;" data-sheetdb-url="https://sheetdb.io/api/v1/zqrv0iabz2lzv"
+    data-sheetdb-search="id=5">
+    <h2>{{title}}</h2>
+    <video width="320" height="240" controls>
+  <source src={{url}} type="video/mp4">
+</video>
+    
+</div>
+
+
+
+
+
+<script src="https://sheetdb.io/handlebars.js"></script>
